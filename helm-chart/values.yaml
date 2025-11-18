@@ -1,0 +1,16 @@
+replicaCount: 1
+image:
+  repository: REPLACE_WITH_ECR_REPO
+  tag: latest
+service:
+  type: ClusterIP
+  port: 8080
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: springboot.local
+      paths:
+        - path: /
+          pathType: Prefix
