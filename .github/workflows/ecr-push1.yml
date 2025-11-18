@@ -3,7 +3,7 @@ name: Build, Push to ECR and Deploy to EKS
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-n-push:
